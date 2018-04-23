@@ -14,6 +14,10 @@ module.exports = {
           }
         },
         {
+          test: /\.json$/,
+          loader: 'json-loader'
+        },
+        {
           test: /\.html$/,
           use: [
             {
@@ -42,6 +46,9 @@ module.exports = {
       new webpack.HotModuleReplacementPlugin()
     ],
     devtool: 'inline-source-map',
+    resolve: {
+      extensions: [".js",".jsx", ".json"]
+      },
     devServer: {
       hot: true,
       // proxy: {
