@@ -1,20 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import React, {Component} from 'react';
+import Root from './components/Root'
+import store from './redux';
+import {Provider} from 'react-redux';
+import {ConnectedRouter} from 'react-router-redux';
+import history from './history';
+import Root from './components/Root';
 
 class App extends React.Component {
   render() {
-    return <div>
-      <p>React here!</p>
-      <p>Yes aasdasdsad </p> 
-    </div>
-  ;
+    return (
+      <Provider store = {store}>
+        <DragDropContextProvider backend={HTML5Backend}>
+            <ConnectedRouter history={history}>
+                <Root/>
+            </ConnectedRouter>
+        </DragDropContextProvider>
+      </Provider>
+    );
   }   
 }
-function enumerable(value) {
-    return function (target, key, descriptor) {
-       descriptor.enumerable = value;
-       return descriptor;
-    }
-  }
+
 export default App;
 ReactDOM.render(<App />, document.getElementById("app"));
