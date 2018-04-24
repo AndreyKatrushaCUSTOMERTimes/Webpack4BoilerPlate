@@ -17,6 +17,7 @@ i18n
     //   defaultTransParent: 'div', // needed for preact
       wait: true
     },
+     resources: require(`./dictionary.json`)
     // resources: './dictionary.json'
   });
 
