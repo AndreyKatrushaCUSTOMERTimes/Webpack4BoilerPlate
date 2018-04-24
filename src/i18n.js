@@ -5,7 +5,7 @@ import { reactI18nextModule } from 'react-i18next';
 i18n
   .use(reactI18nextModule)
   .init({
-    fallbackLng: 'en',
+    fallbackLng: ['en', 'de'],
     // have a common namespace used around the full app
     ns: ['translations'],
     defaultNS: 'translations',

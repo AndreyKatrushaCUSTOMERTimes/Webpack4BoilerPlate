@@ -1,9 +1,16 @@
 {
     "en": {
         "translation": {
-          "test_message": "This is a test message",
+          "title": "This is a test en",
           "amount_of_bananas": "{{count}} banana",
           "amount_of_bananas_plural": "{{count}} bananas" 
         }
+      },
+    "de": {
+      "translation": {
+        "title": "This is a test de",
+        "amount_of_bananas": "{{count}} banana",
+        "amount_of_bananas_plural": "{{count}} bananas" 
       }
+    }  
 }
